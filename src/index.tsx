@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {splitIntoWords} from "./1-hello-tast/01";
 
-export const sentence  = "Hello my friends!";
-const  result = splitIntoWords(sentence)
-console.log(result)
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,7 +17,7 @@ root.render(
   </React.StrictMode>
 );
 
-let a = sentence
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
