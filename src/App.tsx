@@ -4,11 +4,23 @@ import './App.css';
 
 function App() {
 
-  return (
-    <div className="App">
+    const  names = ["Dimych", "Sveta", "Katya", "Viktor", "Ignat"]
+    const users = [
+        {name: "Dimych"},
+        {name: "Sveta"},
+        {name:"Katya"},
+        {name:"Viktor"},
+        {name:"Ignat"}
+    ]
+    const lielements = users.map((u, index) => <li key ={index}>{u.name}</li>)
 
-    </div>
-  );
+    return (
+        <div className="App">
+            <ul>
+                {lielements}
+            </ul>
+        </div>
+    );
 }
 
 export default App;
