@@ -1,6 +1,6 @@
 import {student, StudentType} from "../02/02";
 import {CityType, GovernmentType, HousesType} from "../02/02_02";
-import exp from "constants";
+
 
 export const sum = (a: number, b: number) => {
     return a + b

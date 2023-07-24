@@ -1,4 +1,5 @@
 import {CityType} from "./02_02";
+import {demolishHousesOnTheStreet} from "./02";
 
 let city: CityType
 
@@ -6,6 +7,7 @@ beforeEach(() => {
     city = {
         title: "New York",
         houses: [{
+            id: 1,
             buildedAt: 2012,
             repaired: false,
             address: {
@@ -15,6 +17,7 @@ beforeEach(() => {
                 }
             }
         }, {
+            id: 2,
             buildedAt: 2008,
             repaired: false,
             address: {
@@ -24,12 +27,13 @@ beforeEach(() => {
                 }
             }
         }, {
+            id: 3,
             buildedAt: 2010,
             repaired: false,
             address: {
                 number: 101,
                 street: {
-                    title: "White street"
+                    title: "Happy street"
                 }
             }
         }],
@@ -54,11 +58,17 @@ test("test city should contains 3 houses", () => {
         expect(city.houses[2].buildedAt).toBe(2010)
         expect(city.houses[2].repaired).toBe(false)
         expect(city.houses[2].address.number).toBe(101)
-        expect(city.houses[2].address.street.title).toBe("White street")
+        expect(city.houses[2].address.street.title).toBe("Happy street")
     }
 )
 
+test("Houses should be destroyed", () => {
 
+    demolishHousesOnTheStreet(city, "Happy street")
+
+    expect(city.houses.length).toBe(2)
+    expect(city.houses[0].id).toBe(1)
+})
 
 
 

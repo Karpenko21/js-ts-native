@@ -1,5 +1,6 @@
 import {CityType} from "../02/02_02";
 import {addMoneyToBudget, createMessage, repairHouse, toFireStaff, toHireStaff} from "./03";
+import {getBuildingsWithStaffCountGreaterThen} from "../02/02";
 
 let city: CityType
 
@@ -100,3 +101,13 @@ test("Greeting should be correct", () => {
 
     expect(message).toBe("Hello New York! I want you be happy. All 100000 men")
 })
+
+
+test("buildings with correct staff count", () => {
+    const buildins = getBuildingsWithStaffCountGreaterThen(city.governmentBuildings, 500)
+
+    expect(buildins.length).toBe(1)
+    expect(buildins[0].type).toBe("FIRE-STATION")
+
+})
+

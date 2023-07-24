@@ -1,3 +1,5 @@
+import {CityType, GovernmentType} from "./02_02";
+
 export type StudentType = {
     id: number
     name: string
@@ -36,4 +38,14 @@ export const student: StudentType = {
         {id: 3, title: "JS"},
     ]
 }
+
+export const demolishHousesOnTheStreet = (city: CityType, street: string) => {
+city.houses = city.houses.filter(h => h.address.street.title !== street)
+}
+
+export const getBuildingsWithStaffCountGreaterThen = (buildings: Array<GovernmentType>, number: number) => {
+    return buildings.filter(b => b.staffCount > number)
+}
+
+
 
