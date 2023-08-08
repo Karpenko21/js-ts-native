@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {User} from "./6/06_callback";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
 
     return (
         <div className="App">
+            <User/>
             <ul>
                 {lielements}
             </ul>
