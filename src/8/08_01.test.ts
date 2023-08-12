@@ -19,8 +19,9 @@ test("should update corresponding user", () => {
 })
 
 test("should delete corresponding user", () => {
-    users["1"].name = "Ekaterina"
 
-    expect(users['1'].name).toBe(undefined)
+    delete users["1"]
+
+    expect(users['1']).toBe(undefined)
 
 })
